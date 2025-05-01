@@ -35,7 +35,7 @@ export const getMountList = () => {
  * @returns {function(...[*]=)}
  */
 export const addMount = (fs, mountPoint, mountType, vfsOpt, mountOpt) => {
-	if (!fs.endsWith(":")) fs = fs + ":";
+//	if (!fs.endsWith(":")) fs = fs + ":";
 	const type = CREATE_MOUNT
 	return (dispatch) => {
 		axiosInstance.post(urls.createMount, {fs, mountPoint, mountType, vfsOpt, mountOpt}).then(res => {
